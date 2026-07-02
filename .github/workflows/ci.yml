@@ -1,0 +1,19 @@
+name: CI Pipeline
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Print Message
+        run: echo "Running CI Pipeline"
+
+      - name: Test
+        run: echo "Tests Passed Successfully"
